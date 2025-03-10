@@ -1,0 +1,1 @@
+UNIVERSITY STAFF MANAGEMENT SYSTEM THAT USEs CONSTRUCTOR,HYBRID  INHERITANCE  AND MULTIPLE INHERITENCE INCLUDE properties like name, email , timezone  and role  have class named lecturer,driver,nurse  sstudent and lab technician  in constructor  (default parameterized copy constructor should be demonstrated) explain the code and question it an understable way  use c++
