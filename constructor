@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Car {
+public:
+    // This is the constructor. It runs when we create a car.
+    Car(string color, string model) {
+        carColor = color;  // Set the color of the car
+        carModel = model;  // Set the model of the car
+           // Set the year of the car
+        cout << "The " << carColor << " " << carModel << " is mine "<< endl;
+    }
+
+    // Method to drive the car
+    void drive() {
+        cout << carModel << " is driving!" << endl;
+    }
+
+private:
+    string carColor;
+    string carModel;
+   
+};
+
+int main() {
+    // Creating a car object
+    Car myCar("red", "subaru");  // Constructor runs here!
+    myCar.drive();  // The car can drive now
+
+    return 0;
+}
