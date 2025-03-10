@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Robot {
+public:
+    // Parameterized constructor
+    Robot(string name, string color) {
+        robotName = name;  // Use the given name for the robot
+        robotColor = color; // Use the given color for the robot
+        cout << "A robot has been created with a name and color!" << endl;
+    }
+
+    void showInfo() {
+        cout << "Name: " << robotName << ", Color: " << robotColor << endl;
+    }
+
+private:
+    string robotName;
+    string robotColor;
+};
+
+int main() {
+    // Creating a robot using the parameterized constructor
+    Robot myRobot("Tosh", "Yellow");  // You give the name and color
+    myRobot.showInfo();  // The robot will have the name "Bumblebee" and color "Yellow"
+    return 0;
+}
