@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+// Base class (Car)
+class Car {
+public:
+    void drive() {
+        cout << "The car is driving!" << endl;
+    }
+    void honk() {
+        cout << "Honk! Honk!" << endl;
+    }
+};
+
+// Derived class (RaceCar) inherits from Car
+class RaceCar : public Car {
+public:
+    void turbo() {
+        cout << "The race car is going super fast with turbo!" << endl;
+    }
+};
+
+int main() {
+    // Creating a normal Car object
+    Car myCar;
+    myCar.drive();
+    myCar.honk();
+    
+    // Creating a RaceCar object
+    RaceCar myRaceCar;
+    myRaceCar.drive();  // This comes from the Car class
+    myRaceCar.honk();   // This comes from the Car class
+    myRaceCar.turbo();  // This is specific to the RaceCar class
+
+    return 0;
+}
