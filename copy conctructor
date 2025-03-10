@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class Robot {
+public:
+    // Parameterized constructor to set up the robot
+    Robot(string name, string color) {
+        robotName = name;
+        robotColor = color;
+    }
+
+    // Copy constructor to create a copy of the robot
+    Robot(const Robot &original) {
+        robotName = original.robotName;  // Copy the name
+        robotColor = original.robotColor;  // Copy the color
+        cout << "A copy of the robot has been created!" << endl;
+    }
+
+    void showInfo() {
+        cout << "Name: " << robotName << ", Color: " << robotColor << endl;
+    }
+
+private:
+    string robotName;
+    string robotColor;
+};
+
+int main() {
+    // Create a robot with a specific name and color
+    Robot myRobot("RoboMax", "blue");
+
+    // Now make a copy of that robot
+    Robot copiedRobot = myRobot;  // Copy constructor is used here
+
+    // Show info of both robots
+    myRobot.showInfo();  // Original robot
+    copiedRobot.showInfo();  // Copied robot
+
+    return 0;
+}
