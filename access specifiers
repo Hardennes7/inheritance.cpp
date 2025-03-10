@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class ToyBox {
+public:
+    // Public toys - anyone can play with them
+    string publicToy = "Robot";
+
+    // Private toys - only the ToyBox class can use them
+private:
+    string privateToy = "Doll";
+
+public:
+    // Method to show the private toy (because the class itself can use private things)
+    void showPrivateToy() {
+        cout << "You can see the private toy: " << privateToy << endl;
+    }
+};
+
+int main() {
+    ToyBox myToyBox;
+
+    // You can access the public toy
+    cout << "Public toy: " << myToyBox.publicToy << endl;
+
+    // You cannot access the private toy directly because it's private
+    // The following line would cause an error:
+    // cout << "Private toy: " << myToyBox.privateToy << endl;  // Error!
+
+    // But you can use the public method to show the private toy
+    myToyBox.showPrivateToy();
+
+    return 0;
+}
